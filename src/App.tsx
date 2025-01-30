@@ -7,18 +7,17 @@ import DataContextProvider from './provider/SharedProvider';
 
 const App: React.FC = () => {
     return (
-       
-            <div className='flex flex-col md:flex-row h-full overflow-auto'>
-                <DataContextProvider>
-                    <Sidebar/>
-                    <Router>
-                        <Routes>
-                            <Route path="/" element={<ProjectListPage />} />
-                            <Route path="/:projectId" element={<ProjectDetailPage />} />
-                        </Routes>
-                    </Router>
-                </DataContextProvider>
-            </div>
+        <div className='flex flex-col md:flex-row h-full overflow-auto'>
+            <DataContextProvider>
+                <Sidebar/>
+                <Router>
+                    <Routes>
+                        <Route path="/" element={<ProjectListPage />} />
+                        <Route path="/:projectId" element={<ProjectDetailPage />} />
+                    </Routes>
+                </Router>
+            </DataContextProvider>
+        </div>
         
     );
 };
